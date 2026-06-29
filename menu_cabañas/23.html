@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instituto José Trinidad Cabañas</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#003399;
+}
+
+/* ENCABEZADO */
+
+.banner{
+background:linear-gradient(135deg,#003399,#005eff);
+padding:20px;
+text-align:center;
+color:white;
+}
+
+.banner img{
+width:180px;
+}
+
+.banner h1{
+font-size:60px;
+font-weight:bold;
+text-transform:uppercase;
+text-shadow:3px 3px 8px rgba(0,0,0,.5);
+}
+
+.banner p{
+font-size:28px;
+font-style:italic;
+}
+
+/* MENÚ */
+
+.menu{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+padding:15px;
+gap:10px;
+}
+
+.menu li{
+list-style:none;
+position:relative;
+}
+
+.menu li a{
+display:block;
+padding:18px 30px;
+color:white;
+font-size:24px;
+font-weight:bold;
+text-decoration:none;
+border-radius:15px;
+transition:.4s;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+.inicio{
+background:#e60000;
+}
+
+.nosotros{
+background:#0033cc;
+}
+
+.academico{
+background:#00aa33;
+}
+
+.estudiantes{
+background:#f4a300;
+}
+
+.noticias{
+background:#7b1fd3;
+}
+
+.contacto{
+background:#0099ff;
+}
+
+.menu li a:hover{
+transform:translateY(-5px);
+}
+
+/* SUBMENÚ */
+
+.submenu{
+display:none;
+position:absolute;
+top:100%;
+left:0;
+min-width:250px;
+z-index:100;
+}
+
+.submenu li{
+margin-top:5px;
+}
+
+.submenu a{
+font-size:18px;
+padding:15px;
+border-radius:10px;
+}
+
+.menu li:hover .submenu{
+display:block;
+}
+
+.nosotros-sub a{
+background:#0033cc;
+}
+
+.academico-sub a{
+background:#00aa33;
+}
+
+.estudiantes-sub a{
+background:#f4a300;
+}
+
+.noticias-sub a{
+background:#7b1fd3;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="banner">
+
+<img src="logo-cabanas.png">
+
+<h1>José Trinidad Cabañas</h1>
+
+<p>Trabajo • Estudio • Disciplina</p>
+
+</div>
+
+<ul class="menu">
+
+<li>
+<a href="#" class="inicio">
+<i class="fas fa-home"></i> Inicio
+</a>
+</li>
+
+<li>
+
+<a href="#" class="nosotros">
+<i class="fas fa-school"></i> Nosotros
+</a>
+
+<ul class="submenu nosotros-sub">
+<li><a href="#">Misión y Visión</a></li>
+<li><a href="#">Historia</a></li>
+<li><a href="#">Autoridades</a></li>
+<li><a href="#">Instalaciones</a></li>
+</ul>
+
+</li>
+
+<li>
+
+<a href="#" class="academico">
+<i class="fas fa-graduation-cap"></i> Académico
+</a>
+
+<ul class="submenu academico-sub">
+<li><a href="#">Oferta Académica</a></li>
+<li><a href="#">Planes de Estudio</a></li>
+<li><a href="#">Docentes</a></li>
+<li><a href="#">Calendario</a></li>
+</ul>
+
+</li>
+
+<li>
+
+<a href="#" class="estudiantes">
+<i class="fas fa-users"></i> Estudiantes
+</a>
+
+<ul class="submenu estudiantes-sub">
+<li><a href="#">Admisiones</a></li>
+<li><a href="#">Reglamento</a></li>
+<li><a href="#">Becas</a></li>
+</ul>
+
+</li>
+
+<li>
+
+<a href="#" class="noticias">
+<i class="fas fa-newspaper"></i> Noticias
+</a>
+
+<ul class="submenu noticias-sub">
+<li><a href="#">Eventos</a></li>
+<li><a href="#">Galería</a></li>
+<li><a href="#">Comunicados</a></li>
+</ul>
+
+</li>
+
+<li>
+<a href="#" class="contacto">
+<i class="fas fa-user"></i> Contacto
+</a>
+</li>
+
+</ul>
+
+</body>
+</html>

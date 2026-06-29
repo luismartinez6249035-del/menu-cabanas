@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instituto José Trinidad Cabañas</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+/* MENÚ */
+header{
+    background:linear-gradient(90deg,#0033cc,#0066ff);
+    padding:10px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.3);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+}
+
+.logo img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    background:white;
+    padding:5px;
+}
+
+.logo h1{
+    color:white;
+    margin-left:15px;
+    font-size:24px;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    padding:10px 15px;
+    border-radius:8px;
+    transition:0.4s;
+}
+
+nav ul li a:hover{
+    background:#ff0000;
+    transform:translateY(-3px);
+}
+
+/* PORTADA */
+.hero{
+    height:85vh;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+    url('logo-cabanas.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    color:white;
+}
+
+.hero-content h2{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:25px;
+}
+
+.boton{
+    background:#00aa44;
+    color:white;
+    text-decoration:none;
+    padding:15px 30px;
+    border-radius:30px;
+    font-size:20px;
+    font-weight:bold;
+    transition:.4s;
+}
+
+.boton:hover{
+    background:#ff0000;
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+<img src="logo-cabanas.png" alt="Logo Instituto">
+<h1>Instituto José Trinidad Cabañas</h1>
+</div>
+
+<nav>
+<ul>
+<li><a href="#">Inicio</a></li>
+<li><a href="#">Historia</a></li>
+<li><a href="#">Carreras</a></li>
+<li><a href="#">Galería</a></li>
+<li><a href="#">Docentes</a></li>
+<li><a href="#">Contacto</a></li>
+</ul>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+<h2>Bienvenidos al Instituto Polivalente José Trinidad Cabañas</h2>
+
+<p>Trabajo • Estudio • Disciplina</p>
+
+<a href="#" class="boton">Conocer Más</a>
+</div>
+
+</section>
+
+</body>
+</html>

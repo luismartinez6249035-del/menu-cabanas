@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instituto José Trinidad Cabañas</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#003399;
+}
+
+/* ENCABEZADO */
+.banner{
+    background:linear-gradient(135deg,#003399,#005eff);
+    padding:20px;
+    text-align:center;
+    color:white;
+}
+
+.banner img{
+    width:180px;
+}
+
+.banner h1{
+    font-size:60px;
+    font-weight:bold;
+    text-transform:uppercase;
+    text-shadow:3px 3px 8px rgba(0,0,0,.5);
+}
+
+.banner p{
+    font-size:28px;
+    font-style:italic;
+}
+
+/* MENÚ */
+.menu{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding:15px;
+    gap:10px;
+}
+
+.menu li{
+    list-style:none;
+    position:relative;
+}
+
+.menu li a{
+    display:block;
+    padding:18px 30px;
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:15px;
+    transition:.4s;
+    box-shadow:0 5px 15px rgba(0,0,0,.3);
+    cursor: pointer;
+}
+
+.inicio{ background:#e60000; }
+.nosotros{ background:#0033cc; }
+.academico{ background:#00aa33; }
+.carreras-btn { background:#00bcd4; } /* Nuevo color para Carreras */
+.estudiantes{ background:#f4a300; }
+.contacto{ background:#0099ff; }
+
+.menu li a:hover{
+    transform:translateY(-5px);
+}
+
+/* SUBMENÚS */
+.submenu{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    min-width:250px;
+    z-index:100;
+}
+
+.submenu li{
+    margin-top:5px;
+}
+
+.submenu a{
+    font-size:18px;
+    padding:15px;
+    border-radius:10px;
+}
+
+.menu li:hover .submenu{
+    display:block;
+}
+
+.nosotros-sub a{ background:#0033cc; }
+.academico-sub a{ background:#00aa33; }
+.carreras-sub a { background:#00bcd4; } /* Estilo submenú carreras */
+.estudiantes-sub a{ background:#f4a300; }
+
+/* CUADRO DE CONTENIDO (DONDE SE INTEGRAN LAS PÁGINAS) */
+.contenedor-paginas {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.pagina-cuadro {
+    display: none; 
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    animation: fadeIn 0.5s ease;
+    min-height: 600px;
+}
+
+.pagina-cuadro.activa {
+    display: block;
+}
+
+/* VISOR DE PÁGINAS WEB (IFRAME) */
+.visor-web {
+    width: 100%;
+    height: 650px;
+    border: none;
+    border-radius: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+
+<div class="banner">
+    <img src="file:///C:/Users/DELL/Desktop/imagenes_caba%C3%B1as/LOGOS/caba%C3%B1i.png">
+    <h1>José Trinidad Cabañas</h1>
+    <p>Trabajo • Estudio • Disciplina</p>
+</div>
+
+<ul class="menu">
+    <li>
+        <a class="inicio" onclick="cargarEnlace('inicio', 'internal')">
+            <i class="fas fa-home"></i> Inicio
+        </a>
+    </li>
+
+    <li>
+        <a class="nosotros" onclick="cargarEnlace('nosotros.html')">
+            <i class="fas fa-school"></i> Nosotros
+        </a>
+        <ul class="submenu nosotros-sub">
+            <li><a onclick="cargarEnlace('mision_vision.html')">Misión y Visión</a></li>
+            <li><a onclick="cargarEnlace('historia.html')">Historia</a></li>
+            <li><a onclick="cargarEnlace('autoridades.html')">Autoridades</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a class="academico" onclick="cargarEnlace('oferta_academica.html')">
+            <i class="fas fa-graduation-cap"></i> Académico
+        </a>
+        <ul class="submenu academico-sub">
+            <li><a onclick="cargarEnlace('oferta.html')">Oferta Académica</a></li>
+            <li><a onclick="cargarEnlace('planes.html')">Planes de Estudio</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a class="carreras-btn" onclick="cargarEnlace('carreras_general.html')">
+            <i class="fas fa-book-open"></i> CARRERAS ▾
+        </a>
+        <ul class="submenu carreras-sub">
+            <li><a onclick="cargarEnlace('informatica.html')"><b>BACHILLER BTPI</b></a></li>
+            <li><a onclick="cargarEnlace('ELECTRICIDAD.HTML')"><b>BACHILLER BTPE</b></a></li>
+            <li><a onclick="cargarEnlace('finanzas.html')"><b>BACHILLER BTPF</b></a></li>
+            <li><a onclick="cargarEnlace('humanidades.html')"><b>BACHILLER BTPH</b></a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a class="estudiantes" onclick="cargarEnlace('estudiantes.html')">
+            <i class="fas fa-users"></i> Estudiantes
+        </a>
+        <ul class="submenu estudiantes-sub">
+            <li><a onclick="cargarEnlace('admisiones.html')">Admisiones</a></li>
+            <li><a onclick="cargarEnlace('reglamento.html')">Reglamento</a></li>
+        </ul>
+    </li>
+
+    <li>
+        <a class="contacto" onclick="cargarEnlace('contacto.html')">
+            <i class="fas fa-user"></i> Contacto
+        </a>
+    </li>
+</ul>
+
+<div class="contenedor-paginas">
+
+    <div id="cuadro-inicio" class="pagina-cuadro activa">
+        <h2>Bienvenidos al Instituto José Trinidad Cabañas</h2>
+        <hr><br>
+        <p>Este es el cuadro principal de inicio. Selecciona cualquier opción del menú superior o de los submenús de Carreras para abrir el contenido web aquí mismo.</p>
+    </div>
+
+    <div id="cuadro-dinamico" class="pagina-cuadro">
+        <iframe id="pantalla-web" class="visor-web" src=""></iframe>
+    </div>
+
+</div>
+
+<script>
+function cargarEnlace(url, tipo = 'external') {
+    let cuadroInicio = document.getElementById('cuadro-inicio');
+    let cuadroDinamico = document.getElementById('cuadro-dinamico');
+    let iframe = document.getElementById('pantalla-web');
+
+    if (tipo === 'internal' && url === 'inicio') {
+        // Volver a la pantalla de bienvenida inicial
+        cuadroDinamico.classList.remove('activa');
+        cuadroInicio.classList.add('activa');
+    } else {
+        // Activar visor e incrustar la página correspondiente (.html)
+        cuadroInicio.classList.remove('activa');
+        cuadroDinamico.classList.add('activa');
+        
+        iframe.src = url; 
+    }
+}
+</script>
+
+</body>
+</html>
